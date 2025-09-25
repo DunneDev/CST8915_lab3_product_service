@@ -11,7 +11,7 @@ if (!FRONTEND_ORIGIN) throw new Error("Missing required environment variable: FR
 
 await app.register(cors, { origin: FRONTEND_ORIGIN });
 
-// no need to throw error, just use a default if not found
+// port env var set by azure
 const PORT: number = process.env.PORT ? Number(process.env.PORT) : 3030;
 
 // define prouct scheema
